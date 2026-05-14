@@ -1,26 +1,35 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Layout } from "@/components/site/Layout";
+import { Hero } from "@/components/site/Hero";
+import { Services } from "@/components/site/Services";
+import { Facilities } from "@/components/site/Facilities";
+import { VehicleShowcase } from "@/components/site/VehicleShowcase";
+import { Destinations } from "@/components/site/Destinations";
+import { Stats } from "@/components/site/Stats";
+import { Testimonials } from "@/components/site/Testimonials";
+import { ContactCTA } from "@/components/site/ContactCTA";
 
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title: "Verma Tour & Travels — Travel Beyond Limits" },
+      { name: "description", content: "Luxury bus rentals & Himachal tour packages with comfort, safety & unforgettable experiences." },
+    ],
+  }),
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
-
 function Index() {
-  return <PlaceholderIndex />;
+  return (
+    <Layout>
+      <Hero />
+      <Services />
+      <Facilities />
+      <VehicleShowcase />
+      <Destinations />
+      <Stats />
+      <Testimonials />
+      <ContactCTA />
+    </Layout>
+  );
 }
