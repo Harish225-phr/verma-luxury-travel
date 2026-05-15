@@ -8,6 +8,7 @@ import { Destinations } from "@/components/site/Destinations";
 import { Stats } from "@/components/site/Stats";
 import { Testimonials } from "@/components/site/Testimonials";
 import { ContactCTA } from "@/components/site/ContactCTA";
+import { Founder } from "@/components/site/Founder";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -27,6 +28,7 @@ function Index() {
       <Facilities />
       <VehicleShowcase />
       <Destinations />
+      <Founder />
       <Stats />
       <Testimonials />
       <ContactCTA />
