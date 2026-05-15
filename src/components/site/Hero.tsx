@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Compass, ChevronDown, Sparkles } from "lucide-react";
 import { Link } from "@tanstack/react-router";
-import heroBus from "@/assets/hero-bus.jpg";
+import heroBus from "@/assets/verma-bus-megha.png";
 
 export function Hero() {
   return (

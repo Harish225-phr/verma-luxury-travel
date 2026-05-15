@@ -3,9 +3,10 @@ import { motion } from "framer-motion";
 import { Layout } from "@/components/site/Layout";
 import { PageHero } from "@/components/site/PageHero";
 import { ContactCTA } from "@/components/site/ContactCTA";
-import busExterior from "@/assets/bus-exterior.jpg";
-import busInterior from "@/assets/bus-interior.jpg";
-import hero from "@/assets/hero-bus.jpg";
+import vermaBus from "@/assets/verma-bus-megha.png";
+import vermaRamgarhia from "@/assets/verma-bus-ramgarhia.jpg";
+import vermaVan from "@/assets/verma-van-front.png";
+import vermaTempo from "@/assets/verma-tempo-spiti.png";
 import manali from "@/assets/dest-manali.jpg";
 import shimla from "@/assets/dest-shimla.jpg";
 import dharamshala from "@/assets/dest-dharamshala.jpg";
@@ -23,7 +24,7 @@ export const Route = createFileRoute("/gallery")({
   }),
 });
 
-const images = [hero, manali, busInterior, shimla, ladakh, busExterior, dharamshala, kasol, dalhousie];
+const images = [vermaBus, manali, vermaVan, shimla, vermaTempo, ladakh, vermaRamgarhia, dharamshala, kasol, dalhousie];
 
 function GalleryPage() {
   return (

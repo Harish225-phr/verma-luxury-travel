@@ -4,8 +4,10 @@ import { Layout } from "@/components/site/Layout";
 import { PageHero } from "@/components/site/PageHero";
 import { Facilities } from "@/components/site/Facilities";
 import { ContactCTA } from "@/components/site/ContactCTA";
-import busExterior from "@/assets/bus-exterior.jpg";
-import busInterior from "@/assets/bus-interior.jpg";
+import vermaBus from "@/assets/verma-bus-megha.png";
+import vermaRamgarhia from "@/assets/verma-bus-ramgarhia.jpg";
+import vermaVan from "@/assets/verma-van-front.png";
+import vermaTempo from "@/assets/verma-tempo-spiti.png";
 
 export const Route = createFileRoute("/fleet")({
   component: FleetPage,
@@ -18,10 +20,10 @@ export const Route = createFileRoute("/fleet")({
 });
 
 const vehicles = [
-  { img: busExterior, name: "Volvo 9400 — 45 Seater", desc: "Premium AC luxury coach with reclining seats, ambient lighting, GPS, on-board entertainment.", capacity: "45 Pax" },
-  { img: busInterior, name: "Premium Sleeper Coach", desc: "Cinematic interiors with leather sleeper berths, reading lights and Wi-Fi.", capacity: "30 Berths" },
-  { img: busExterior, name: "Mercedes Mini Coach", desc: "Compact luxury for small groups, families & corporate offsites.", capacity: "20 Pax" },
-  { img: busInterior, name: "Tempo Traveller Lux", desc: "9 to 17-seater for weekends & quick mountain getaways.", capacity: "9-17 Pax" },
+  { img: vermaBus, name: "Verma Megha — Luxury Coach", desc: "Premium AC luxury coach with reclining seats, ambient lighting, GPS & on-board entertainment.", capacity: "45 Pax" },
+  { img: vermaRamgarhia, name: "Verma Ramgarhia Special", desc: "Cinematic interiors with leather sleeper berths, reading lights and curated comfort.", capacity: "32 Pax" },
+  { img: vermaVan, name: "Mercedes Sprinter Lux Van", desc: "Compact luxury for small groups, families & corporate offsites across the Himalayas.", capacity: "12 Pax" },
+  { img: vermaTempo, name: "Tempo Traveller — Incredible Spiti", desc: "9 to 17-seater for weekends, quick mountain getaways and the Spiti circuit.", capacity: "9-17 Pax" },
 ];
 
 function FleetPage() {
