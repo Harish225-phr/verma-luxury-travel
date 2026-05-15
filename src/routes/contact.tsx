@@ -89,14 +89,20 @@ function ContactPage() {
                 <MessageCircle className="h-4 w-4" /> Chat on WhatsApp
               </a>
             </div>
-            <div className="rounded-3xl glass-strong p-2 overflow-hidden">
+            <a href="https://maps.app.goo.gl/KWc73Cf2veWwVNuWA" target="_blank" rel="noopener noreferrer" className="block rounded-3xl glass-strong p-2 overflow-hidden group relative">
               <iframe
                 title="Map"
                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d432418.9!2d77.0!3d31.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1700000000000"
-                className="w-full h-64 rounded-2xl border-0 grayscale opacity-80"
+                className="w-full h-64 rounded-2xl border-0 grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition duration-500 pointer-events-none"
                 loading="lazy"
               />
-            </div>
+              <div className="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/20 transition rounded-3xl">
+                <div className="flex items-center gap-2 px-4 py-2 rounded-full glass text-sm font-medium">
+                  <MapPin className="h-4 w-4 text-accent" />
+                  Open in Google Maps
+                </div>
+              </div>
+            </a>
           </motion.div>
         </div>
       </section>
