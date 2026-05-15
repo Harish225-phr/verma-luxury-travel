@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { SectionHeading } from "./SectionHeading";
-import busExterior from "@/assets/bus-exterior.jpg";
-import busInterior from "@/assets/bus-interior.jpg";
+import busExterior from "@/assets/verma-bus-ramgarhia.jpg";
+import busInterior from "@/assets/verma-van-front.png";
 
 const tags = ["Luxury Interior", "Premium Comfort", "Safe Journey", "Tourist Special", "Sleeper Coach", "Volvo AC", "Tempo Traveller", "Mini Coach"];
 
