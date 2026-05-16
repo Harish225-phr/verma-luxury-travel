@@ -1,7 +1,19 @@
 import { Link } from "@tanstack/react-router";
 import { Phone, Mail, MapPin, Instagram, Facebook, Twitter } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export function Footer() {
+  const [year, setYear] = useState(2026);
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
+  const socials = [
+    { Icon: Instagram, href: "https://www.instagram.com/verma_tour_travel/" },
+    { Icon: Facebook, href: "#" },
+    { Icon: Twitter, href: "#" },
+  ];
+
   return (
     <footer className="relative mt-32 border-t border-border overflow-hidden">
       <div className="absolute inset-0 -z-10 opacity-40" style={{ background: "var(--gradient-glow)" }} />
@@ -20,8 +32,8 @@ export function Footer() {
             Premium luxury bus rentals and Himachal tour packages crafted for travelers who expect comfort, safety and unforgettable experiences.
           </p>
           <div className="mt-6 flex gap-3">
-            {[Instagram, Facebook, Twitter].map((Icon, i) => (
-              <a key={i} href="#" className="h-10 w-10 rounded-full glass flex items-center justify-center hover:glow-neon transition">
+            {socials.map(({ Icon, href }, i) => (
+              <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full glass flex items-center justify-center hover:glow-neon transition">
                 <Icon className="h-4 w-4" />
               </a>
             ))}
@@ -49,14 +61,14 @@ export function Footer() {
           <ul className="space-y-3 text-sm text-muted-foreground">
             <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-accent" /> 98164 92182</li>
             <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-accent" /> 70184 74668</li>
-            <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-accent" /> info@vermatravels.in</li>
+            <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-accent" /><span>info@vermatravels.in</span></li>
             <li className="flex items-start gap-2"><MapPin className="h-4 w-4 text-accent mt-0.5" /> Himachal Pradesh, India</li>
           </ul>
         </div>
       </div>
       <div className="border-t border-border">
         <div className="mx-auto max-w-7xl px-6 py-5 text-xs text-muted-foreground flex flex-col md:flex-row justify-between gap-2">
-          <span>© {new Date().getFullYear()} Verma Tour & Travels. All rights reserved.</span>
+          <span>© {year} Verma Tour & Travels. All rights reserved.</span>
           <span>Crafted with luxury in mind.</span>
         </div>
       </div>
