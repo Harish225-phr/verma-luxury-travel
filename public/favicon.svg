@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+    <linearGradient id="mountainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5b3ba3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d1b4e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer circle light bg -->
+  <circle cx="100" cy="100" r="98" fill="#f0f0f5" filter="url(#shadow)"/>
+  
+  <!-- Outer circle border gold -->
+  <circle cx="100" cy="100" r="98" fill="none" stroke="#d4a574" stroke-width="4"/>
+  
+  <!-- Inner circle border dark purple -->
+  <circle cx="100" cy="100" r="92" fill="none" stroke="#4a2f7d" stroke-width="3"/>
+  
+  <!-- Inner circle border gold thin -->
+  <circle cx="100" cy="100" r="88" fill="none" stroke="#d4a574" stroke-width="1.5"/>
+  
+  <!-- Mountains back -->
+  <path d="M 35 130 L 65 65 L 85 90 L 110 45 L 145 110" 
+        fill="#3d2766" opacity="0.6"/>
+  
+  <!-- Mountains middle -->
+  <path d="M 40 130 L 68 68 L 88 92 L 115 48 L 150 115" 
+        fill="url(#mountainGrad)"/>
+  
+  <!-- Mountains front highlights -->
+  <path d="M 45 130 L 72 72 L 92 95 L 120 52 L 155 120" 
+        fill="#7e5ba3" opacity="0.4"/>
+  
+  <!-- Road curves -->
+  <path d="M 75 140 Q 85 95 95 60" stroke="#d4a574" stroke-width="3.5" fill="none" 
+        stroke-linecap="round" opacity="0.9"/>
+  <path d="M 80 140 Q 90 100 100 65" stroke="#e8c689" stroke-width="1.5" fill="none" 
+        stroke-linecap="round" opacity="0.7"/>
+  
+  <!-- Car body -->
+  <g>
+    <!-- Car shadow -->
+    <ellipse cx="78" cy="110" rx="14" ry="9" fill="#2d1b4e" opacity="0.3"/>
+    <!-- Car main -->
+    <path d="M 68 105 L 75 100 L 85 100 L 92 105 Q 92 110 88 112 L 72 112 Q 68 110 68 105" 
+          fill="#5b3ba3" stroke="#2d1b4e" stroke-width="0.5"/>
+    <!-- Car windows -->
+    <ellipse cx="75" cy="103" rx="3" ry="2.5" fill="#3d2766"/>
+    <ellipse cx="85" cy="103" rx="3" ry="2.5" fill="#3d2766"/>
+    <!-- Car details -->
+    <circle cx="71" cy="112" r="1.5" fill="#d4a574"/>
+    <circle cx="89" cy="112" r="1.5" fill="#d4a574"/>
+  </g>
+  
+  <!-- Location pin -->
+  <g transform="translate(142, 55)">
+    <!-- Pin outer circle -->
+    <circle cx="0" cy="0" r="7" fill="#d4a574" stroke="#c49454" stroke-width="1"/>
+    <!-- Pin inner circle -->
+    <circle cx="0" cy="0" r="4" fill="#5b3ba3"/>
+    <!-- Pin inner dot -->
+    <circle cx="0" cy="0" r="2" fill="#d4a574"/>
+  </g>
+  
+  <!-- Road end accent -->
+  <g opacity="0.5">
+    <path d="M 95 62 L 100 55 L 105 62" stroke="#d4a574" stroke-width="2" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>
