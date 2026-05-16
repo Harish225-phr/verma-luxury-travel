@@ -10,7 +10,7 @@ export function Footer() {
 
   const socials = [
     { Icon: Instagram, href: "https://www.instagram.com/verma_tour_travel/" },
-    { Icon: Facebook, href: "#" },
+    { Icon: Facebook, href: "https://www.facebook.com/" },
     { Icon: Twitter, href: "#" },
   ];
 
